@@ -54,7 +54,6 @@ app.post('/create', (req, res) => {
 
 app.put("/updateUser/:id", (req, res) => {
     const id = req.params.id;
-    console.log("update body -> ", req.body);
     UserModel.findByIdAndUpdate({ _id: id },
         {
             email: req.body.email,
